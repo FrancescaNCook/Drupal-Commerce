@@ -4,40 +4,47 @@
 
 # MultiSafepay plugin for Drupal Commerce
 
-Easily integrate MultiSafepay payment solutions into your Drupal Commerce webshop with the free MultiSafepay Drupal Commerce plugin.
+Easily integrate MultiSafepay payment solutions into your Drupal Commerce webshop with our free plugin.
 
-[![Latest Stable Version](https://img.shields.io/github/release/multisafepay/Drupal-Commerce.svg)](https://github.com/MultiSafepay/Drupal-Commerce/releases)
+[![Latest stable version](https://img.shields.io/github/release/multisafepay/Drupal-Commerce.svg)](https://github.com/MultiSafepay/Drupal-Commerce/releases)
 
 ## About MultiSafepay
-MultiSafepay is a collecting payment service provider which means we take care of the agreements, technical details and payment collection required for each payment method. You can start selling online today and manage all your transactions from one place.
-## Supported Payment Methods
-The supported Payment Methods & Gift cards for this plugin can be found over here: [Payment Methods & Gift cards](https://docs.multisafepay.com/plugins/drupal7/faq/#available-payment-methods-in-drupal7)
 
-## Requirements
-- To use the plugin you need a MultiSafepay account. You can create a test account on https://testmerchant.multisafepay.com/signup
+MultiSafepay is a collecting payment service provider, which means we take care of electronic contracts, technical details, and payment collection for each payment method. You can start selling online today and manage all your transactions in one place.
+
+## Supported payment methods
+
+See MultiSafepay Docs – [Drupal](https://docs.multisafepay.com/docs/drupal).
+
+## Prerequisites
+
+- You will need a [MultiSafepay account](https://testmerchant.multisafepay.com/signup). Consider a test account first.
 - Drupal Commerce
 - Drupal 7
 
-## Installation
-Unpack the content of the .ZIP file in /sites/all/modules.
+## Installation and configuration
 
-For additional information or instructions please see our [installation & configuration manual](https://docs.multisafepay.com/plugins/drupal7/manual/)
-
-## Configuration
-1. Login in your admin and navigate to the backend of your webshop and go to _Site settings -> Modules_
-2. Scroll down and turn on _Commerce MultiSafepay JSON_ and the payment methods you would like to offer
-3. Navigate to _Store settings -> Payment methods_ and enable multisafepay and on the edit page you can fill in your API details. Information on where to find your Account ID, Site ID, Site code or API key can be found on our [API key page](https://docs.multisafepay.com/tools/multisafepay-control/get-your-api-key/).
-
-## Rules
-On installation of the main module, two additonal rules are installed (but not enabled):
-
-1. MultiSafepay Order paid in full: Order state to processing
-2. MultiSafepay Order Complete: Shipped at MultiSafepay
-
-When the first one is enabled, the order state will be set to processing once the order has been paid in full. The second rule will update the order status of the transaction at MultiSafepay. This will activate the Pay After Delivery/Klarna/E-invoice invoicing process.
+1. Unpack the content of the .ZIP file in the root of your Drupal 7 webshop.
+2. Sign in to your Drupal 7 backend.
+3. Go to **Site settings** > **Modules**.
+4. Enable the Commerce MultiSafepay JSON module, and your selected payment method modules.
+5. Click **Save configuration**.
+6. Go to **Store settings** > **Advanced store settings** > **Payment methods**.
+7. **Enable** the `multisafepay` core module.
+8. **Enable** the modules for each payment method.
+9. To configure each payment method, under Actions, click the Edit button.
+10. When the main module is installed, two rules are created but disabled by default:
+    - MultiSafepay order paid in full: Order state to `processing`
+    This rule sets the order to `processing` when the order is paid in full.
+    - MultiSafepay order complete: Shipped at MultiSafepay
+    This rule updates the transaction status to Shipped at MultiSafepay. 
+    For Pay After Delivery, Klarna, and E-Invoicing, this triggers the invoicing process.
  
 ## Support
-You can create issues on our repository. If you need any additional help or support, please contact <a href="mailto:integration@multisafepay.com">integration@multisafepay.com</a>
+
+- Create an issue on this repository. 
+- Email <a href="mailto:integration@multisafepay.com">integration@multisafepay.com</a>
 
 ## Want to be part of the team?
-Are you a developer interested in working at MultiSafepay? [View](https://www.multisafepay.com/careers/#jobopenings) our job openings and feel free to get in touch with us.
+
+Are you a developer interested in working at MultiSafepay? Check out our [job openings](https://www.multisafepay.com/careers/#jobopenings) and feel free to get in touch!
